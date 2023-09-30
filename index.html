@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>IRIS_FLOWER_CLASSIFIER</title>
+</head>
+<style>
+    body{
+        background-color: slategray;
+    }
+    h1{
+        font-size: 50px;
+        color: white;
+        font-weight: 300;
+    }
+    label{
+        color: white;
+        font-size: 20px;
+    }
+    input{
+        font-size: 15px;
+        border-radius: 25px;
+        margin-bottom: 20px;
+        background-color: rgb(182, 226, 243);
+        color: black;
+    }
+</style>
+
+<body>
+    <h1>DIFFICULTY IN CLASSIFICATION???</h1>
+    <h1>Here comes IRIS_CLASSIFIER..!!</h1>
+    <form class="form-group" action="/predict" method="POST">
+
+        <label for="sepal_length: ">sepal_length: </label>
+        <input class="form-control" type="number" name="sepal_length"><br>
+        <label for="petal_length: ">petal_length: </label>
+        <input class="form-control" type="number" name="petal_length"> <br>
+        <br>
+        <div>
+            {% if setosa %}
+            <div class="alert alert-primary">{{setosa}}</div>
+            {% endif %}
+
+            {% if versicolor %}
+            <div class="alert alert-primary">{{versicolor}}</div>
+            {% endif %}
+
+            {% if verginica %}
+            <div class="alert alert-primary">{{verginica}}</div>
+            {% endif %}
+        </div>
+        <br>
+        <input class="btn btn-dark" type="submit" name="submit">
+    </form>
+
+</body>
+
+</html>
